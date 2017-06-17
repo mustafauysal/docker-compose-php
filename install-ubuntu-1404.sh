@@ -10,5 +10,5 @@ sudo apt-get -y install linux-image-extra-$(uname -r)
 sudo apt-get -y install docker-engine
 
 # https://docs.docker.com/compose/install/
-sudo bash -c 'curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
+sudo bash -c 'curl -L https://github.com/docker/compose/releases/download/1.11.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
 sudo chmod +x /usr/local/bin/docker-compose

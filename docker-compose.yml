@@ -10,15 +10,14 @@ services:
      - "80:80"
     links:
      - phpfpm
-  restart: always
+    restart: always
 
   memcached:
-  image: memcached:latest
-  restart: always
+    image: memcached:latest
+    restart: always
 
   phpfpm:
-    build: .
-    dockerfile: php-fpm/Dockerfile
+    build: ./php-fpm/Dockerfile
     container_name: phpfpm
     volumes:
       - /var/www:/var/www
@@ -26,4 +25,4 @@ services:
       - ./php-fpm/www.conf:/etc/php/7.1/fpm/pool.d/www.conf
     links:
       - memcached
-  restart: always
+    restart: always
